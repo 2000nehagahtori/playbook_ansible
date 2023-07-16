@@ -1,0 +1,15 @@
+Creating a basic ansible playbook to automate system using SSH:
+$ vim ~/playbook.yaml
+
+- name: ping 
+  hosts:server
+  tasks: 
+          -name: ping
+           ansible.builtIn.ping :
+          -name: debug
+           ansible.builtIn.debug :
+                     msg: Hello world 
+
+
+RUN YOUR PLAYBOOK USING :
+$ ansible-playbook ~/playbook.yaml
